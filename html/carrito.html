@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remeras Isma</title>
+
+    <!--description-->
+    <meta name="description" content="Las remeras de mejor calidad del mercado, 100% ALGODON">
+
+    <!---css bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <!--css-->
+    <link rel="stylesheet" href="../css/estilo.css">
+    <link rel="shortcut icon" href="../img/logo de pagina 2.png" type="image/x-icon">
+</head>
+
+<body>
+
+
+    <header>
+        <div class="superior">
+            <p class=" animate__animated animate__bounceInLeft sininteres">3 CUOTAS SIN INTERÉS </p>
+        </div>
+
+        <nav class="navbar navbar-expand-lg fondoheader">
+            <div class="container-fluid">
+                <a class="navbar-brand " href="../index.html"><img class="logo" src="../img/logo de pagina 2.png"
+                        alt="logo de remeras isma"></a>
+                <button class="navbar-toggler botoncito" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!--reloj -->
+                <div class="date-time-container">
+                    <p id="date-time"></p>
+
+                </div>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link  enlaces" aria-current="page" href="../index.html">HOME</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link enlaces" href="nosotros.html">NOSOTROS</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link enlaces" href="remeras.html">remeras</a>
+                        </li>
+
+                       
+                        <li class="nav-item">
+                            <a class="nav-link enlaces" href="carrito.html">CARRITO <span class="numerito">0</span></a>
+                        </li>
+
+
+                        
+
+
+
+
+                    </ul>
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="buscar..." aria-label="Search">
+                        <button class="btn miboton" type="submit">Buscar</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+
+        <div class="inferior">
+            <p class=" animate__animated animate__bounceInLeft envio_gratis">Envío gratis a partir de $12.000 - Hasta 3
+                cuotas sin interés </p>
+        </div>
+
+
+
+    </header>
+    <br>
+    <div class="carro">
+        <table class=" table table-dark table-hover ">
+            <thead>
+                <tr class="carro-producto">
+                    <th scope="col">#</th>
+                    <th scope="col">PRODUCTO</th>
+                    <th scope="col">PRECIO</th>
+                    <th scope="col">CANTIDAD</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td class="tabla_producto">
+                        <img src="../img/remera 13.jpg" alt="">
+                        <h5 class="titulo">titulo</h5>
+                    </td>
+                    <td class="tabla_precio">
+                        <p> $ 1000 </p>
+                    </td>
+                    <td class="tabla_cantidad">
+                        <input type="number" min="1" value="1">
+                        <button class="delete btn btn-danget">X</button>
+                    </td>
+                </tr>
+
+            </tbody>
+
+        </table>
+
+        <br><br>
+
+        <div class="row mx-4">
+            <div class="col">
+                <h3 class="itemCartTotal">TOTAL:0</h3>
+
+            </div>
+            <div class="col d-flex justify content-end">
+                <button class="btn bnt-success">COMPRAR</button>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- footer pie de pagina -->
+
+    <footer class=" row  info">
+
+        <div class="col-xl-3 col-md-6 col-sm-12 info_comp">
+            <h3>INFO DE LA COMPAÑÌA</h3>
+            <a href="#">
+                <h4>Prensa</h4>
+            </a>
+            <a href="#">
+                <h4>Encontranos</h4>
+            </a>
+
+        </div>
+
+        <div class="col-xl-3 col-md-6 col-sm-12 ayuda">
+            <h3>AYUDA</h3>
+            <a href="#">
+                <h4>Cambios y devoluciones</h4>
+            </a>
+
+            <a href="#">
+                <h4>Guia de talles</h4>
+            </a>
+
+            <a href="#">
+                <h4>Preguntas frecuentes</h4>
+            </a>
+
+            <a href="#">
+                <h4>Politicas de privacidad</h4>
+            </a>
+
+            <a href="#">
+                <h4>Término de usos </h4>
+            </a>
+
+
+
+        </div>
+
+        <div class="col-xl-3 col-md-6 col-sm-12 contactanos">
+            <h3>CONTACTANOS</h3>
+            <a href="#">
+                <h4>Horario de atencion:</h4>
+            </a>
+            <a href="#">
+                <h4>Lunes a viernes de 9:30 <br> 18:00</h4>
+            </a>
+
+        </div>
+
+
+    </footer>
+
+    <!-- scrip de javascript-->
+    <script src="../js/main.js"></script>
+
+</body>
