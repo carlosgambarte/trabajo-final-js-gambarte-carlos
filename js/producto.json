@@ -1,0 +1,147 @@
+
+
+ [
+    {
+
+       "id": "remera-01",
+        "titulo": "remera 01",
+        "imagen": "../img/remera 13.jpg",
+        "categoria": {
+            "nombre": "remeras",
+           "id": "remeras"
+        },
+        "precio": 1500  
+
+    },
+
+    {
+       "id": "remera-02",
+        "titulo": "remera 02",
+        "imagen": "../img/remera 14.jpg",
+        "categoria": {
+            "nombre": "remeras",
+           "id": "remeras"
+        },
+        "precio": 1500
+
+    },
+    {
+
+       "id": "remera-03",
+        "titulo": "remera 03",
+        "imagen": "../img/remera 15.jpg",
+        "categoria": {
+            "nombre": "remeras",
+           "id": "remeras"
+        },
+        "precio":  1500
+
+    },
+    {
+       "id": "remera-04",
+        "titulo": "remera 04",
+        "imagen": "../img/remera 16.jpg",
+        "categoria": {
+            "nombre": "remeras",
+           "id": "remeras"
+        },
+        "precio": 1500
+
+    },
+    {
+
+       "id": "remera-05",
+        "titulo": "remera 05",
+        "imagen": "../img/remera 17.jpg",
+        "categoria": {
+            "nombre": "remeras",
+           "id": "remeras"
+        },
+        "precio":  1500
+
+    },
+    {
+
+       "id": "remera-06",
+        "titulo": "remera 06",
+        "imagen": "../img/remera 18.jpg",
+        "categoria": {
+            "nombre": "remeras",
+           "id": "remeras"
+        },
+        "precio": 1500
+
+    },
+    {
+
+       "id": "remera-07",
+        "titulo": "remera 07",
+        "imagen": "../img/remera 19.jpg",
+        "categoria": {
+            "nombre": "remeras",
+           "id": "remeras"
+        },
+        "precio":  1500
+
+    },
+    {
+
+       "id": "remera-08",
+        "titulo": "remera 08",
+        "imagen": "../img/remera 20.jpg",
+        "categoria": {
+            "nombre": "remeras",
+           "id": "remeras"
+        },
+        "precio":  1500
+
+    },
+    {
+
+       "id": "remera-09",
+        "titulo": "remera 09",
+        "imagen": "../img/remera 21.jpg",
+        "categoria": {
+            "nombre": "remeras",
+           "id": "remeras"
+        },
+        "precio": 1500
+
+    },
+    {
+
+       "id": "remera-10",
+        "titulo": "remera 10",
+        "imagen": "../img/remera 22.jpg",
+        "categoria": {
+            "nombre": "remeras",
+           "id": "remeras"
+        },
+        "precio": 1500
+
+    },
+    {
+
+       "id": "remera-11",
+        "titulo": "remera 11",
+        "imagen": "../img/remera 23.jpg",
+        "categoria": {
+            "nombre": "remeras",
+           "id": "remeras"
+        },
+        "precio":  1500
+
+    },
+    {
+
+       "id": "remera-12",
+        "titulo": "remera 12",
+        "imagen": "../img/remera 24.jpg",
+        "categoria": {
+            "nombre": "remeras",
+           "id": "remeras"
+        },
+        "precio": 1500
+
+    }
+]

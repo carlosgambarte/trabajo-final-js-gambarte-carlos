@@ -3,14 +3,14 @@ function updateDateTime() {
     const now = new Date();
     const options = {
         weekday: 'long',
-        
-day: 'numeric',
+
+        day: 'numeric',
         hour: '2-digit',
         minute: '2-digit',
         second: '2-digit',
         hour12: false // 24-hour format
     };
-    const formattedDateTime = now.toLocaleString ('es-ES', options);
+    const formattedDateTime = now.toLocaleString('es-ES', options);
     dateTimeElement.textContent = formattedDateTime;
 }
 
@@ -21,176 +21,120 @@ setInterval(updateDateTime, 1000);
 updateDateTime();
 
 //productos
+let productos = []
+fetch ("../js/producto.json")
+.then (Response => Response.json())
+.then (data =>{
+    productos = data;
 
-const productos = [
-    {
-        
-        id:"remera-01",
-        nombre: "remera 01",
-        imagen:"../img/remera 13.jpg",
-        categoria: {
-            nombre: "remeras",
-            id: "remeras"
-        },
-        precio:"$ 1500"
+    cargarProductos(productos)
 
-    },
-   
-    {
-        id:"remera-02",
-        nombre: "remera 02",
-        imagen:"../img/remera 14.jpg",
-        categoria: {
-            nombre: "remeras",
-            id: "remeras"
-        },
-        precio:"$ 1500"
+})
 
-    },
-    {
-        
-        id:"remera-03",
-        nombre: "remera 03",
-        imagen:"../img/remera 15.jpg",
-        categoria: {
-            nombre: "remeras",
-            id: "remeras"
-        },
-        precio:"$ 1500"
+const contenedorproductos = document.querySelector("#contenedor-productos");
 
-    },
-    {
-        id:"remera-04",
-        nombre: "remera 04",
-        imagen:"../img/remera 16.jpg",
-        categoria: {
-            nombre: "remeras",
-            id: "remeras"
-        },
-        precio:"$ 1500"
+let botonesAgregar = document.querySelectorAll(".producto-agregar");
 
-    },
-    {
-        
-        id:"remera-05",
-        nombre: "remera 05",
-        imagen:"../img/remera 17.jpg",
-        categoria: {
-            nombre: "remeras",
-            id: "remeras"
-        },
-        precio:"$ 1500"
+const numerito = document.querySelector ("#numerito");
 
-    },
-    {
-        
-        id:"remera-06",
-        nombre: "remera 06",
-        imagen:"../img/remera 18.jpg",
-        categoria: {
-            nombre: "remeras",
-            id: "remeras"
-        },
-        precio:"$ 1500"
-
-    },
-    {
-      
-        id:"remera-07",
-        nombre: "remera 07",
-        imagen:"../img/remera 19.jpg",
-        categoria: {
-            nombre: "remeras",
-            id: "remeras"
-        },
-        precio:"$ 1500"
-
-    },
-    {
-        
-        id:"remera-08",
-        nombre: "remera 08",
-        imagen:"../img/remera 20.jpg",
-        categoria: {
-            nombre: "remeras",
-            id: "remeras"
-        },
-        precio:"$ 1500"
-
-    },
-    {
-        
-        id:"remera-09",
-        nombre: "remera 09",
-        imagen:"../img/remera 21.jpg",
-        categoria: {
-            nombre: "remeras",
-            id: "remeras"
-        },
-        precio:"$ 1500"
-
-    }, 
-     {
-        
-        id:"remera-10",
-        nombre: "remera 10",
-        imagen:"../img/remera 22.jpg",
-        categoria: {
-            nombre: "remeras",
-            id: "remeras"
-        },
-        precio:"$ 1500"
-
-    },
-    {
-        
-        id:"remera-11",
-        nombre: "remera 11",
-        imagen:"../img/remera 23.jpg",
-        categoria: {
-            nombre: "remeras",
-            id: "remeras"
-        },
-        precio:"$ 1500"
-
-    },
-    {
-        
-        id:"remera-12",
-        nombre: "remera 12",
-        imagen:"../img/remera 24.jpg",
-        categoria: {
-            nombre: "remeras",
-            id: "remeras"
-        },
-        precio:"$ 1500"
-
-    },
-   ];
-
-const contenedorproductos = document.querySelector ("#contenedor-productos");
-
-   function cargarproductos() {
-    productos.forEach (producto => {
-        const div = document.createElement ("div");
-        div.classList.add ("producto");
+function cargarProductos() {
+    productos.forEach( producto => {
+        const div = document.createElement("div");
+        div.classList.add("producto");
         div.innerHTML = `
         
-        
-        
-        <img class=" remera_uno " src="${producto.imagen}" alt="${producto.nombre} ">
-    
-        <div class="texto_uno">
+        <img class=" producto-imagen" src="${producto.imagen}" alt=${producto.titulo}>
 
-       <h3 class="precio_uno">${producto.precio}</h3>
+        <div class="producto-detalles">
+         <h3 class="producto-titulo">${producto.titulo}</h3>
 
-        </div> <button class="carrito" id="${producto.id}">agregar a carrito </button> </div>
-        
-        `;
+        <p class="producto-precio">  $ ${producto.precio} </p>
+
+        <button class="producto-agregar" id="${producto.id}" >agregar a carrito </button>
+        </div>
+
+        `
 
         contenedorproductos.append(div);
     })
-   }
 
-cargarproductos();
+    actualizarBotonesAgregar()
+    
+}
+
+
+
+//agregar productos al carrito
+
+function actualizarBotonesAgregar() {
+    
+    botonesAgregar = document.querySelectorAll(".producto-agregar");
+    botonesAgregar.forEach(boton =>{
+        boton.addEventListener("click", agregarAlcarrito);
+    })
+}
+
+let productosEnCarrito;
+
+let productosEnCarritoLS = localStorage.getItem ("productos-en-carrito")
+
+if (productosEnCarritoLS) {
+
+     productosEnCarrito = JSON.parse (productosEnCarritoLS) 
+     actualizarNumerito()
+} else {
+    productosEnCarrito = []
+}
+
+
+
+function agregarAlcarrito(e) {
+    Toastify({
+        text: "Producto agregado",
+        duration: 2000,
+       
+        newWindow: true,
+        close: true,
+        gravity: "top", // `top` or `bottom`
+        position: "left", // `left`, `center` or `right`
+        stopOnFocus: true, // Prevents dismissing of toast on hover
+        style: {
+          background: "linear-gradient(to right, black, grey)",
+        },
+        onClick: function(){} // Callback after click
+      }).showToast();
+    
+    const idBoton= e.currentTarget.id;
+
+    const productoAgregado = productos.find (producto => producto.id ===idBoton)
+// console.log(productoAgregado);
+     
+if (productosEnCarrito.some (producto => producto.id ===idBoton)) {
+    const index = productosEnCarrito.findIndex (producto => producto.id ===idBoton);
+    productosEnCarrito [index].cantidad++
+
+} else {
+    productoAgregado.cantidad =1;
+     
+    productosEnCarrito.push (productoAgregado);
+   
+}
+    actualizarNumerito()
+  localStorage.setItem("productos-en-carrito", JSON.stringify (productosEnCarrito));
+
+
+
+    }
+ 
+   
+  
+
+
+
+function actualizarNumerito() {
+
+    let nuevoNumerito = productosEnCarrito.reduce((acc, producto) => acc + producto.cantidad, 0);
+    numerito.innerText = nuevoNumerito;
+}
+
 

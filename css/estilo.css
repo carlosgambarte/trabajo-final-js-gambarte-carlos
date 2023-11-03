@@ -1,434 +1,567 @@
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  overflow-x: hidden;
+  background-color: rgb(37, 37, 37);
+}
+
+/*HEADER*/
+.logo {
+  width: 80px;
+}
+
+.superior {
+  background-color: black;
+  color: white;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sininteres {
+  margin-bottom: 0;
+}
+
+.fondoheader {
+  background-color: rgb(58, 56, 56);
+}
+
+.miboton {
+  background-color: blue;
+  color: white;
+}
+
+.miboton:hover {
+  background-color: white;
+  color: blue;
+  border: 2px solid rgb(255, 247, 247);
+}
+
+.botoncito {
+  background-color: white;
+}
+
+.inferior {
+  background-color: black;
+  color: white;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.envio_gratis {
+  margin-bottom: 0;
+}
+
+/*centro*/
+@keyframes texto {
+  0% {
+    opacity: 0;
   }
-  
-  body {
-    overflow-x: hidden;
-    background-color: rgb(37, 37, 37);
+
+  100% {
+    opacity: 100%;
   }
-  
-  /*HEADER*/
-  .logo {
-    width: 80px;
-  }
-  
-  .superior {
-    background-color: black;
-    color: white;
-    height: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .sininteres {
-    margin-bottom: 0;
-  }
-  
-  .fondoheader {
-    background-color: rgb(58, 56, 56);
-  }
-  
-  .miboton {
-    background-color: blue;
-    color: white;
-  }
-  .miboton:hover {
-    background-color: white;
-    color: blue;
-    border: 2px solid rgb(255, 247, 247);
-  }
-  
-  .botoncito {
-    background-color: white;
-  }
-  
+}
+
+.primera {
+  width: 110%;
+}
+
+.logocentral {
+  width: 80%;
+}
+
+.remeralisa {
+  width: 90%;
+}
+
+.enlaces {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  color: white;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.texto1 {
+  background: radial-gradient(rgb(119, 119, 119), black);
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.texto_central {
+  animation-name: texto;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  font-size: 4rem;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: bold;
+  color: white;
+}
+
+/*footer*/
+.info {
+  background-color: rgb(77, 74, 74);
+  display: flex;
+  justify-content: center;
+  padding-bottom: 2rem;
+}
+
+h3 {
+  font-size: 1.4rem;
+}
+
+h4 {
+  font-size: 1rem;
+}
+
+.info_comp {
+  color: white;
+  margin-top: 3rem;
+}
+
+.ayuda {
+  color: white;
+  margin-top: 3rem;
+}
+
+.contactanos {
+  color: white;
+  margin-top: 3rem;
+}
+
+.camioncito {
+  width: 20%;
+}
+
+.cont-envios {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.cont-pagos {
+  color: white;
+  text-align: center;
+  padding-top: 2rem;
+}
+
+.descuento_porciento {
+  width: 100%;
+}
+
+.ultimos_descuentos {
+  margin-top: 3rem;
+  margin-left: 1rem;
+  margin-bottom: 3rem;
+}
+
+/*NOSOTROS*/
+.contenido {
+  background-image: url(../img/fondo\ footer.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.imagen4 {
+  width: 80%;
+  margin-top: 3rem;
+  padding-left: 3rem;
+}
+
+.cont_texto {
+  margin-top: 3rem;
+  padding-right: 5rem;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-weight: bold;
+}
+
+.titulodecontenido {
+  color: white;
+  text-align: center;
+  font-size: 3rem;
+  text-decoration: underline;
+}
+
+.parrafo1 {
+  color: white;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+/*REMERAS*/
+.central {
+  display: grid;
+  grid-template-columns: 1fr 4%;
+  margin-top: 3rem;
+  margin-left: 2rem;
+
+}
+
+.contenedor-productos {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.producto-imagen {
+  width: 270px;
+  height: 350px;
+  border-radius: 1rem;
+}
+
+.producto-detalles {
+  background-color: black;
+  color: white;
+  border-radius: 1rem;
+  padding: 1rem;
+  width: 270px;
+  display: flex;
+  flex-direction: column;
+  gap: .25rem;
+}
+
+.producto-agregar {
+  border-radius: 2rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  border: 2px solid white;
+}
+
+.producto-agregar:hover {
+  background-color: black;
+  color: white;
+}
+
+/* Carrito */
+
+.numerito{
+  background-color: white;
+  color: black;
+  padding: .15 .25rem;
+  border-radius: .25rem;
+}
+
+.contenedor {
+  margin-top: 1rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+
+}
+
+.contenedor-carrito{
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.carrito-vacio, .carrito-comprado {
+  color: white;
+ 
+
+
+}
+
+.titulo-principal {
+  color: white;
+}
+
+.carrito-productos {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  color: white;
+}
+
+.carrito-producto {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: grey;
+  padding: .5rem;
+  padding-right: 1.5rem;
+  border-radius: 1rem;
+}
+
+.carrito-producto-imagen {
+  width: 4rem;
+  border-radius: 1rem;
+}
+
+.carrito-producto-eliminar{
+  border: 0;
+  background-color: transparent;
+  color: red;
+  cursor: pointer;
+}
+
+.carrito-acciones{
+  display: flex;
+  justify-content: space-between;
+}
+
+.carrito-acciones-vaciar{
+  border: 0;
+  background-color: gray;
+  padding: 1rem;
+  border-radius: 1rem;
+  color: white;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.carrito-acciones-derecha{
+  display: flex;
+}
+.carrito-acciones-total{
+  display: flex;
+
+  background-color: gray;
+  padding: 1rem;
+  border-radius: 1rem;
+  color: white;
+  text-transform: uppercase;
+  gap: 1rem;
+}
+
+
+.carrito-acciones-comprar{
+ 
+  background-color: gray;
+  padding: 1rem;
+  border-radius: 1rem;
+  color: white;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.disabled{
+  display: none;
+}
+
+
+/*CONTACTO*/
+.lisas {
+  width: 90%;
+  margin-top: 8rem;
+  padding-left: 2rem;
+  margin-bottom: 8rem;
+}
+
+.formulario {
+  margin-top: 5rem;
+  padding-right: 4rem;
+  padding-bottom: 3rem;
+}
+
+.contacto {
+  color: white;
+  text-align: center;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: bold;
+  font-size: 3rem;
+}
+
+.escribinos {
+  color: white;
+  text-align: center;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.email {
+  color: white;
+  font-size: 1rem;
+}
+
+.mensaje {
+  color: white;
+  font-size: 1rem;
+}
+
+.nombre {
+  color: white;
+  font-size: 1rem;
+}
+
+.asunto {
+  color: white;
+  font-size: 1rem;
+}
+
+
+.carro {
+  min-height: 70vh;
+  max-width: 1000px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/*MEDIA*/
+@media (max-width: 600px) {
   .inferior {
-    background-color: black;
-    color: white;
-    height: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    font-size: 0.6rem;
   }
-  
-  .envio_gratis {
-    margin-bottom: 0;
-  }
-  
-  /*centro*/
-  @keyframes texto {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 100%;
-    }
-  }
-  .primera {
-    width: 110%;
-  }
-  
-  .logocentral {
-    width: 80%;
-  }
-  
-  .remeralisa {
-    width: 90%;
-  }
-  
-  .enlaces {
-    font-weight: bold;
-    text-transform: uppercase;
-    font-size: 1.5rem;
-    color: white;
-    font-family: "Courier New", Courier, monospace;
-  }
-  
+
   .texto1 {
-    background: radial-gradient(rgb(119, 119, 119), black);
-    height: 150px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+    width: 103%;
   }
-  
+
   .texto_central {
-    animation-name: texto;
-    animation-duration: 4s;
-    animation-iteration-count: infinite;
-    font-size: 4rem;
-    font-family: "Courier New", Courier, monospace;
-    font-weight: bold;
-    color: white;
+    font-size: 2rem;
   }
-  
-  /*footer*/
-  .info {
-    background-color: rgb(77, 74, 74);
-    display: flex;
-    justify-content: center;
-    padding-bottom: 2rem;
-  }
-  
-  h3 {
-    font-size: 1.4rem;
-  }
-  
-  h4 {
-    font-size: 1rem;
-  }
-  
-  .info_comp {
-    color: white;
-    margin-top: 3rem;
-  }
-  
-  .ayuda {
-    color: white;
-    margin-top: 3rem;
-  }
-  
-  .contactanos {
-    color: white;
-    margin-top: 3rem;
-  }
-  
-  .camioncito {
-    width: 20%;
-  }
-  
-  .cont-envios {
-    color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-  }
-  
-  .cont-pagos {
-    color: white;
-    text-align: center;
-    padding-top: 2rem;
-  }
-  
-  .descuento_porciento {
-    width: 100%;
-  }
-  
+
   .ultimos_descuentos {
     margin-top: 3rem;
     margin-left: 1rem;
     margin-bottom: 3rem;
   }
-  
-  /*NOSOTROS*/
-  .contenido {
-    background-image: url(../img/fondo\ footer.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
+
+  .desc_remeras {
+    width: 300px;
   }
-  
-  .imagen4 {
-    width: 80%;
-    margin-top: 3rem;
-    padding-left: 3rem;
+
+  .desc_buzos {
+    padding-top: 3rem;
+    width: 300px;
   }
-  
-  .cont_texto {
-    margin-top: 3rem;
-    padding-right: 5rem;
-    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-    font-weight: bold;
-  }
-  
+
   .titulodecontenido {
-    color: white;
-    text-align: center;
-    font-size: 3rem;
-    text-decoration: underline;
+    font-size: 2rem;
   }
-  
+
+  .imagen4 {
+    padding-left: 6rem;
+  }
+
   .parrafo1 {
-    color: white;
-    text-align: center;
+    font-size: 0.8rem;
+  }
+
+  .escribinos {
+    font-size: 0.8rem;
+  }
+
+  .lisas {
+    padding-left: 1rem;
+    margin-top: 5rem;
+    margin-bottom: 3rem;
+  }
+
+  .cont_texto {
+    padding-right: 1rem;
+  }
+
+  .tabla {
     font-size: 1.5rem;
   }
-  
-  /*REMERAS*/
-  .central {
-    display: grid;
-    grid-template-columns: 1fr 4%;
-    margin-top: 3rem;
-    margin-left: 2rem;
-    
+
+  .tablaremera {
+    width: 80%;
+    padding-top: 2rem;
   }
 
-  .contenedor-productos {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-  }
-  
-  .producto-imagen {
-    width: 270px;
-    height: 350px;
-    border-radius: 1rem;
+  .tablabuzos {
+    width: 80%;
+    padding-top: 3rem;
   }
 
-  .producto-detalles {
-    background-color: black;
-    color: white;
-    border-radius: 1rem;
-    padding: 1rem;
-    width: 270px;
-    display: flex;
-    flex-direction: column;
-    gap: .25rem;
-  }
-  .producto-agregar{
-    border-radius: 2rem;
-    text-transform: uppercase;
-    cursor: pointer;
-    border: 2px solid white;
-  }
-
-  .producto-agregar:hover{
-    background-color: black;
-    color: white;
-  }
-/*   
-  .carrito {
-    height: 30px;
-    width: 200px;
-    margin-bottom: 1rem;
-    background-color: rgb(98, 98, 104);
-    color: white;
-  } */
-
-  
-  
-  
-  /*CONTACTO*/
-  .lisas {
-    width: 90%;
-    margin-top: 8rem;
-    padding-left: 2rem;
-    margin-bottom: 8rem;
-  }
-  
   .formulario {
-    margin-top: 5rem;
-    padding-right: 4rem;
-    padding-bottom: 3rem;
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
   }
-  
-  .contacto {
-    color: white;
+
+  .info {
     text-align: center;
-    font-family: "Courier New", Courier, monospace;
-    font-weight: bold;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 900px) {
+  .texto1 {
+    width: 102%;
+  }
+
+  .texto_central {
     font-size: 3rem;
   }
-  
+
+  .ultimos_descuentos {
+    margin-top: 3rem;
+    margin-left: 1rem;
+    margin-bottom: 3rem;
+  }
+
+  .desc_buzos {
+    padding-top: 3rem;
+  }
+
+  .titulodecontenido {
+    font-size: 3rem;
+  }
+
+  .imagen4 {
+    padding-left: 8rem;
+  }
+
+  .parrafo1 {
+    font-size: 1.3rem;
+  }
+
   .escribinos {
-    color: white;
-    text-align: center;
-    font-family: "Courier New", Courier, monospace;
-    font-weight: bold;
+    font-size: 1.2rem;
+  }
+
+  .lisas {
+    padding-left: 1rem;
+    margin-top: 5rem;
+    margin-bottom: 3rem;
+  }
+
+  .cont_texto {
+    padding-right: 1rem;
+  }
+
+  .tabla {
     font-size: 1.5rem;
   }
-  
-  .email {
-    color: white;
-    font-size: 1rem;
-  }
-  
-  .mensaje {
-    color: white;
-    font-size: 1rem;
-  }
-  
-  .nombre {
-    color: white;
-    font-size: 1rem;
-  }
-  
-  .asunto {
-    color: white;
-    font-size: 1rem;
-  }
-  
 
-  .carro {
-    min-height: 70vh;
-    max-width: 1000px;
-    margin: 0 auto;
-    width: 100%;
+  .tablaremera {
+    width: 60%;
+    padding-top: 2rem;
   }
-  /*MEDIA*/
-  @media (max-width: 600px) {
-    .inferior {
-      font-size: 0.6rem;
-    }
-    .texto1 {
-      width: 103%;
-    }
-    .texto_central {
-      font-size: 2rem;
-    }
-    .ultimos_descuentos {
-      margin-top: 3rem;
-      margin-left: 1rem;
-      margin-bottom: 3rem;
-    }
-    .desc_remeras {
-      width: 300px;
-    }
-    .desc_buzos {
-      padding-top: 3rem;
-      width: 300px;
-    }
-    .titulodecontenido {
-      font-size: 2rem;
-    }
-    .imagen4 {
-      padding-left: 6rem;
-    }
-    .parrafo1 {
-      font-size: 0.8rem;
-    }
-    .escribinos {
-      font-size: 0.8rem;
-    }
-    .lisas {
-      padding-left: 1rem;
-      margin-top: 5rem;
-      margin-bottom: 3rem;
-    }
-    .cont_texto {
-      padding-right: 1rem;
-    }
-    .tabla {
-      font-size: 1.5rem;
-    }
-    .tablaremera {
-      width: 80%;
-      padding-top: 2rem;
-    }
-    .tablabuzos {
-      width: 80%;
-      padding-top: 3rem;
-    }
-    .formulario {
-      padding-right: 1.5rem;
-      padding-left: 1.5rem;
-    }
-    .info {
-      text-align: center;
-    }
+
+  .tablabuzos {
+    width: 60%;
+    padding-top: 3rem;
   }
-  @media (min-width: 601px) and (max-width: 900px) {
-    .texto1 {
-      width: 102%;
-    }
-    .texto_central {
-      font-size: 3rem;
-    }
-    .ultimos_descuentos {
-      margin-top: 3rem;
-      margin-left: 1rem;
-      margin-bottom: 3rem;
-    }
-    .desc_buzos {
-      padding-top: 3rem;
-    }
-    .titulodecontenido {
-      font-size: 3rem;
-    }
-    .imagen4 {
-      padding-left: 8rem;
-    }
-    .parrafo1 {
-      font-size: 1.3rem;
-    }
-    .escribinos {
-      font-size: 1.2rem;
-    }
-    .lisas {
-      padding-left: 1rem;
-      margin-top: 5rem;
-      margin-bottom: 3rem;
-    }
-    .cont_texto {
-      padding-right: 1rem;
-    }
-    .tabla {
-      font-size: 1.5rem;
-    }
-    .tablaremera {
-      width: 60%;
-      padding-top: 2rem;
-    }
-    .tablabuzos {
-      width: 60%;
-      padding-top: 3rem;
-    }
-    .btn {
-      
-      color: antiquewhite;
-    }
-    .info {
-      text-align: center;
-    }
+
+  .btn {
+
+    color: antiquewhite;
   }
+
+  .info {
+    text-align: center;
+  }
+}
+
 /*reloj*/
-  .date-time-container {
-    padding: 10px;
-    color: white;
-    
-    }
-  
-  /*# sourceMappingURL=estilo.css.map */
+.date-time-container {
+  padding: 10px;
+  color: white;
+
+}
+
+/*# sourceMappingURL=estilo.css.map */
